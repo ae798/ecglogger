@@ -1004,7 +1004,7 @@ void setup(void) {
    lcd.print("No Monitor-Cable");
    lcd.setCursor(0,1);
    lcd.print("connected!");
-   while (digitalRead(intellivue) == HIGH) {
+   while (digitalRead(intellivue) == HIGH && digitalRead(propaq) == HIGH) {
    }
   }
   if (digitalRead(intellivue) == LOW)
